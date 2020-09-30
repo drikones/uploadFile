@@ -1,6 +1,7 @@
 package br.com.adriano.estudos.servlet;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -22,9 +23,9 @@ public class UploadServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Arquivo arquivo = new Arquivo();
 		Part filePart = req.getPart("arquivo");
-		
+		InputStream filecontent = filePart.getInputStream();
 		System.out.println("Nome do arquivo: "+getFileName(filePart));
-		arquivo.upload(	"/Users/adrianorocha/Documents/estudos redes", getFileName(filePart), req.getInputStream());
+		arquivo.upload(	"/Users/adrianorocha/Documents/estudos redes", getFileName(filePart), filecontent);
 	}
 	
 	private String getFileName(final Part part) {
