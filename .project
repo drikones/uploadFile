@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>upload_arquivo</name>
+	<name>upload</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -28,4 +28,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/WEB-INF/lib/commons-fileupload-1.4.jar</name>
+			<type>1</type>
+			<location>/home/adriano/Documentos/jars/commons-fileupload-1.4.jar</location>
+		</link>
+	</linkedResources>
 </projectDescription>
